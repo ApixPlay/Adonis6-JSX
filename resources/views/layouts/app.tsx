@@ -1,4 +1,5 @@
 import Html from "@kitajs/html";
+import {Assets} from "../assets.js";
 
 interface AppProps {
   title?: string
@@ -18,7 +19,7 @@ export function App(props: AppProps) {
 
         <title>{title}</title>
 
-        {/*<Assets.Script entrypoint={'resources/js/app.js'} />*/}
+        <Assets.Script entrypoint={'resources/js/app.js'} />
       </head>
       <body {...(page ? { 'data-page': page } : {})}>
       {children}
